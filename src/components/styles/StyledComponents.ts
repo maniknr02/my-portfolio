@@ -1,6 +1,6 @@
 // src/components/styles/StyledComponents.ts
 import { styled } from "@mui/material/styles";
-import { Paper, Box, Toolbar } from "@mui/material";
+import { Paper, Box, Toolbar, Card, CardMedia, CardContent } from "@mui/material";
 import { type Theme } from "@mui/material/styles";
 
 // ---------- HEADER ----------
@@ -82,4 +82,38 @@ export const FooterContainer = styled(Box)(({ theme }: { theme: Theme }) => ({
   fontFamily: "'Lato', sans-serif",
   color: theme.palette.text.secondary,
   fontSize: "0.9rem",
+}));
+
+// ---------- PROJECTS ----------
+export const ProjectsContainer = styled("div")(({ theme }: { theme: Theme }) => ({
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+  gap: theme.spacing(4),
+  padding: theme.spacing(10, 2),
+}));
+
+export const ProjectCard = styled(Card)(({ theme }: { theme: Theme }) => ({
+  borderRadius: "1rem",
+  overflow: "hidden",
+  cursor: "pointer",
+  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+  background: theme.palette.mode === "light" ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.06)",
+  boxShadow:
+    theme.palette.mode === "light" ? "0 6px 20px rgba(0,0,0,0.1)" : "0 6px 20px rgba(0,0,0,0.5)",
+  "&:hover": {
+    transform: "translateY(-6px)",
+    boxShadow:
+      theme.palette.mode === "light"
+        ? "0 10px 28px rgba(0,0,0,0.15)"
+        : "0 10px 28px rgba(0,0,0,0.7)",
+  },
+}));
+
+export const ProjectImage = styled(CardMedia)({
+  height: 180,
+});
+
+export const ProjectContent = styled(CardContent)(({ theme }: { theme: Theme }) => ({
+  padding: theme.spacing(2),
+  textAlign: "left",
 }));

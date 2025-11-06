@@ -6,6 +6,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { ThemeProviderWrapper } from "./theme/ThemeProviderWrapper";
 import { Container } from "@mui/material";
+import Projects from "./components/Projects";
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
       <Container>
         <Hero />
         <About />
+        <Projects />
         <Contact />
       </Container>
       <Footer />
