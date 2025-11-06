@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import { ThemeProviderWrapper } from "./theme/ThemeProviderWrapper";
 import { Container } from "@mui/material";
 import Projects from "./components/Projects";
+import Experience from "./components/Experience";
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
         <Hero />
         <About />
         <Projects />
+        <Experience />
         <Contact />
       </Container>
       <Footer />

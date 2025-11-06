@@ -1,6 +1,6 @@
 // src/components/styles/StyledComponents.ts
 import { styled } from "@mui/material/styles";
-import { Paper, Box, Toolbar, Card, CardMedia, CardContent } from "@mui/material";
+import { Paper, Box, Toolbar, Card, CardMedia, CardContent, Chip } from "@mui/material";
 import { type Theme } from "@mui/material/styles";
 
 // ---------- HEADER ----------
@@ -116,4 +116,42 @@ export const ProjectImage = styled(CardMedia)({
 export const ProjectContent = styled(CardContent)(({ theme }: { theme: Theme }) => ({
   padding: theme.spacing(2),
   textAlign: "left",
+}));
+
+export const ExperienceContainer = styled(Box)(({ theme }: { theme: Theme }) => ({
+  padding: theme.spacing(10, 2),
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+}));
+
+export const ExperienceCard = styled(Paper)(({ theme }: { theme: Theme }) => ({
+  padding: theme.spacing(3),
+  borderRadius: "1rem",
+  marginBottom: theme.spacing(4),
+  maxWidth: 800,
+  width: "100%",
+  backdropFilter: "blur(12px)",
+  background: theme.palette.mode === "light" ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,0.08)",
+  boxShadow:
+    theme.palette.mode === "light" ? "0 6px 20px rgba(0,0,0,0.1)" : "0 6px 20px rgba(0,0,0,0.5)",
+  transition: "all 0.3s ease",
+  "&:hover": {
+    transform: "translateY(-4px)",
+  },
+}));
+
+export const SkillChip = styled(Chip)(({ theme }: { theme: Theme }) => ({
+  margin: theme.spacing(0.5),
+  fontWeight: 600,
+  borderRadius: "8px",
+  backgroundColor:
+    theme.palette.mode === "light" ? theme.palette.primary.light : theme.palette.primary.dark,
+  color:
+    theme.palette.mode === "light"
+      ? theme.palette.primary.contrastText
+      : theme.palette.text.primary,
+  "&:hover": {
+    opacity: 0.9,
+  },
 }));

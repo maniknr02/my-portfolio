@@ -28,3 +28,31 @@ export const projects: Project[] = [
     tech: ["React", "TypeScript", "Grafana", "Docker"],
   },
 ];
+
+export const experiences = [
+  {
+    role: "Full Stack Engineer",
+    company: "CoreConnect Systems",
+    duration: "2023 – Present",
+    desc: [
+      "Built durable workflows using Temporal SDK ensuring transactional consistency.",
+      "Developed scalable backend services with Spring Boot & Node.js.",
+      "Optimized API latency by 40% and improved dashboard rendering by 30%.",
+    ],
+  },
+  {
+    role: "Software Engineer Intern",
+    company: "Innotech Labs",
+    duration: "2022 – 2023",
+    desc: [
+      "Implemented RESTful APIs with authentication & caching strategies.",
+      "Collaborated in Agile sprints delivering 3 features per iteration.",
+    ],
+  },
+];
+
+export const skills = {
+  Frontend: ["React", "TypeScript", "Redux", "Material UI"],
+  Backend: ["Node.js", "Spring Boot", "PostgreSQL", "Redis"],
+  DevOps: ["AWS", "Docker", "GitHub Actions", "NGINX"],
+};
