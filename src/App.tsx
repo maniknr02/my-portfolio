@@ -1,11 +1,20 @@
-import "./App.css";
+import React from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
+import { ThemeProviderWrapper } from "./theme/ThemeProviderWrapper";
+import { Container } from "@mui/material";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-      <h1>This is a React + Vite + TypeScript template.</h1>
-    </>
+    <ThemeProviderWrapper>
+      <Header />
+      <Container>
+        <Hero />
+      </Container>
+      <Footer />
+    </ThemeProviderWrapper>
   );
-}
+};
 
 export default App;
