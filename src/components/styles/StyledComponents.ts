@@ -1,0 +1,85 @@
+// src/components/styles/StyledComponents.ts
+import { styled } from "@mui/material/styles";
+import { Paper, Box, Toolbar } from "@mui/material";
+import { type Theme } from "@mui/material/styles";
+
+// ---------- HEADER ----------
+export const StyledToolbar = styled(Toolbar)(() => ({
+  display: "flex",
+  justifyContent: "space-between",
+  padding: "1rem 0",
+  position: "relative",
+}));
+
+// ---------- HERO ----------
+export const HeroContainer = styled(Box)(({ theme }: { theme: Theme }) => ({
+  minHeight: "80vh",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  textAlign: "center",
+  padding: theme.spacing(4),
+  transition: "color 0.3s ease, background 0.3s ease",
+}));
+
+export const HeroTitle = styled("h1")(({ theme }: { theme: Theme }) => ({
+  fontFamily: "'Montserrat', sans-serif",
+  fontWeight: 800,
+  fontSize: "2.5rem",
+  marginBottom: theme.spacing(2),
+  color: theme.palette.text.primary,
+}));
+
+export const HeroSubtitle = styled("p")(({ theme }: { theme: Theme }) => ({
+  fontFamily: "'Lato', sans-serif",
+  maxWidth: 600,
+  fontSize: "1.2rem",
+  lineHeight: 1.6,
+  color: theme.palette.text.secondary,
+  marginBottom: theme.spacing(3),
+}));
+
+// ---------- ABOUT ----------
+export const StyledAboutPaper = styled(Paper)(({ theme }: { theme: Theme }) => ({
+  padding: "2rem",
+  borderRadius: "1.5rem",
+  backdropFilter: "blur(12px)",
+  transition: "all 0.3s ease",
+  background: theme.palette.mode === "light" ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.06)",
+  boxShadow:
+    theme.palette.mode === "light" ? "0 8px 24px rgba(0,0,0,0.08)" : "0 8px 24px rgba(0,0,0,0.5)",
+  border: `1px solid ${
+    theme.palette.mode === "light" ? "rgba(0,0,0,0.08)" : "rgba(255,255,255,0.08)"
+  }`,
+  "&:hover": {
+    transform: "translateY(-4px)",
+    boxShadow:
+      theme.palette.mode === "light"
+        ? "0 10px 32px rgba(0,0,0,0.12)"
+        : "0 10px 32px rgba(0,0,0,0.6)",
+  },
+}));
+
+export const AboutContainer = styled(Box)(({ theme }: { theme: Theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: theme.spacing(12, 2),
+}));
+
+// ---------- CONTACT ----------
+export const ContactContainer = styled(Box)(({ theme }: { theme: Theme }) => ({
+  padding: theme.spacing(12, 2),
+  textAlign: "center",
+}));
+
+// ---------- FOOTER ----------
+export const FooterContainer = styled(Box)(({ theme }: { theme: Theme }) => ({
+  textAlign: "center",
+  padding: theme.spacing(2),
+  opacity: 0.6,
+  fontFamily: "'Lato', sans-serif",
+  color: theme.palette.text.secondary,
+  fontSize: "0.9rem",
+}));

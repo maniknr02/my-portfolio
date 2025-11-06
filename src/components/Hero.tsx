@@ -1,10 +1,11 @@
 import React from "react";
-import { Box, Typography, Button, Stack, IconButton } from "@mui/material";
+import { Button, Stack, IconButton } from "@mui/material";
 import { GitHub, LinkedIn } from "@mui/icons-material";
+import { HeroContainer, HeroSubtitle, HeroTitle } from "./styles/StyledComponents";
 
 const Hero: React.FC = () => {
   return (
-    <Box
+    <HeroContainer
       sx={{
         minHeight: "80vh",
         display: "flex",
@@ -15,13 +16,11 @@ const Hero: React.FC = () => {
         px: 2,
       }}
     >
-      <Typography variant="h3" fontWeight={700} gutterBottom>
-        Hi, I'm Manikanta 👋
-      </Typography>
-      <Typography variant="h6" sx={{ mb: 3, maxWidth: 600 }}>
+      <HeroTitle>Hi, I'm Manikanta 👋</HeroTitle>
+      <HeroSubtitle>
         Full Stack Engineer passionate about building scalable web applications and crafting elegant
         frontend experiences.
-      </Typography>
+      </HeroSubtitle>
 
       <Stack direction="row" spacing={2} sx={{ mb: 3 }}>
         <IconButton href="https://github.com/maniknr02" target="_blank" color="inherit">
@@ -41,7 +40,7 @@ const Hero: React.FC = () => {
       >
         Download Resume
       </Button>
-    </Box>
+    </HeroContainer>
   );
 };
 

@@ -1,11 +1,12 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
+import { FooterContainer } from "./styles/StyledComponents";
 
 const Footer: React.FC = () => {
   return (
-    <Box sx={{ py: 2, textAlign: "center", opacity: 0.6 }}>
+    <FooterContainer>
       <Typography variant="body2">© {new Date().getFullYear()} Manikanta KNR</Typography>
-    </Box>
+    </FooterContainer>
   );
 };
 
